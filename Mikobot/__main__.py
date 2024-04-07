@@ -256,12 +256,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             guu = await update.effective_message.reply_text("✨")
             await asyncio.sleep(1.8)
             await guu.delete()  # Await this line
-            await update.effective_message.reply_photo(
+            await message.reply_photo(
                 photo=str(choice(START_IMG)),
-                PM_START_TEXT.format(escape_markdown(first_name)),                
-                reply_markup=InlineKeyboardMarkup(START_BTN),
+                caption=PM_START_TEXT.format(escape_markdown(first_name)),
                 parse_mode=ParseMode.MARKDOWN,
-           )
+            )
     else:
         await message.reply_photo(
             photo=str(choice(START_IMG)),
