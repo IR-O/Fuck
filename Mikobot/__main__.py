@@ -260,7 +260,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 reply_markup=InlineKeyboardMarkup(START_BTN),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
-            )
+           )
     else:
         await message.reply_photo(
             photo=str(choice(START_IMG)),
