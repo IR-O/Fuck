@@ -261,7 +261,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 PM_START_TEXT.format(escape_markdown(first_name)),                
                 reply_markup=InlineKeyboardMarkup(START_BTN),
                 parse_mode=ParseMode.MARKDOWN,
-            )
+           )
     else:
         await message.reply_photo(
             photo=str(choice(START_IMG)),
