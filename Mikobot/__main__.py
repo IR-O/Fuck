@@ -254,10 +254,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 parse_mode=ParseMode.MARKDOWN,
             )
             await asyncio.sleep(0.2)
-            guu = await update.effective_message.reply_text("🐾")
+            guu = await update.effective_message.reply_text("✨")
             await asyncio.sleep(1.8)
             await guu.delete()  # Await this line
-            await update.effective_message.reply_photo(random.choice(pikku),
+            await update.effective_message.reply_photo(random.choice(START_IMG),
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(START_BTN),
                 parse_mode=ParseMode.MARKDOWN,
