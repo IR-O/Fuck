@@ -43,6 +43,7 @@ from Mikobot import (
     LOGGER,
     OWNER_ID,
     SUPPORT_CHAT,
+    SUPPORT_CHANNEL,
     TOKEN,
     StartTime,
     app,
