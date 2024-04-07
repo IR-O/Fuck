@@ -625,33 +625,6 @@ async def send_settings(chat_id, user_id, user=False):
                 parse_mode=ParseMode.MARKDOWN,
             )
 
-
-def Miko_Main_Callback(update: Update, context: CallbackContext):
-    query = update.callback_query
-    if query.data == "Main_help":
-        query.message.edit_caption(f"""
- ✦ ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ {BOT_NAME}
-""",
-            parse_mode=ParseMode.MARKDOWN,
-            
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(text="ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
-                        InlineKeyboardButton(text="ᴍᴜsɪᴄ", callback_data="Music_")
-                    ],
-                    [
-                        InlineKeyboardButton(text="ꜱᴘᴀᴍ", callback_data="Music_roy"),
-                        InlineKeyboardButton(text="ᴀɴɪᴍᴇ", callback_data="source_") 
-                    ],
-                    [
-                        InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data="mukesh_back")
-                    ],
-                ]
-            ),
-            )
-
-
 async def settings_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     user = update.effective_user
