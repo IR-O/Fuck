@@ -241,16 +241,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 await IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
-
-        else:
+         else:
             first_name = update.effective_user.first_name
-
-            p = update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAIq82YSS1k1MuQnotpp_iVqLgz6WhuNAAI9CQACFm7gVI4RHTP_GrcvNAQ")
-            p.delete()
-            usr = update.effective_user
-            lol = update.effective_message.reply_text(
-                 FIRST_PART_TEXT.format(usr.first_name),
+            lol = await message.reply_photo(
+                photo=str(choice(START_IMG)),
+                caption=FIRST_PART_TEXT.format(escape_markdown(first_name)),
                 parse_mode=ParseMode.MARKDOWN,
             )
             await asyncio.sleep(0.2)
