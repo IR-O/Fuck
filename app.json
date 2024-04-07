@@ -92,6 +92,11 @@
          "required": true,
          "value": ""
       },
+      "SUPPORT_CHANNEL": {
+         "description": "Your Telegram support Channel chat username. Users will reach out for assistance. Example: MyGroupChatUsernameBlah. Avoid pointing to Miko Support to prevent conflicts.",
+         "required": true,
+         "value": ""
+      },
       "SUPPORT_ID": {
          "description": "Support chat ID.",
          "required": true,
