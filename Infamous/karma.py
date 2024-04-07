@@ -48,7 +48,7 @@ START_BTN = [
     ],
     
     [
-        InlineKeyboardButton(text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="Main_help"),
+        InlineKeyboardButton(text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
 ]
 
