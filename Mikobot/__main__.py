@@ -401,7 +401,7 @@ async def stats_back(update: Update, context: ContextTypes.DEFAULT_TYPE):
         mem = psutil.virtual_memory().percent
         disk = psutil.disk_usage("/").percent
         text = f"""
-𝙎𝙮𝙨𝙩𝙚𝙢 𝙨𝙩𝙖𝙩𝙨@𝙔𝙖𝙚𝙈𝙞𝙠𝙤_𝙍𝙤𝙭𝙗𝙤𝙩
+𝙎𝙮𝙨𝙩𝙚𝙢 𝙨𝙩𝙖𝙩𝙨@Iro_x_music_bot
 ➖➖➖➖➖➖
 UPTIME ➼ {uptime}
 CPU ➼ {cpu}%
@@ -623,6 +623,32 @@ async def send_settings(chat_id, user_id, user=False):
                 "Seems like there aren't any chat settings available :'(\nSend this "
                 "in a group chat you're admin in to find its current settings!",
                 parse_mode=ParseMode.MARKDOWN,
+            )
+
+
+def Miko_Main_Callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "Main_help":
+        query.message.edit_caption(f"""
+ ✦ ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ {BOT_NAME}
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
+                        InlineKeyboardButton(text="ᴍᴜsɪᴄ", callback_data="Music_")
+                    ],
+                    [
+                        InlineKeyboardButton(text="ꜱᴘᴀᴍ", callback_data="Music_roy"),
+                        InlineKeyboardButton(text="ᴀɴɪᴍᴇ", callback_data="source_") 
+                    ],
+                    [
+                        InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data="mukesh_back")
+                    ],
+                ]
+            ),
             )
 
 
