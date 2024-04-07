@@ -241,7 +241,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 await IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
-         else:
+       else:
             first_name = update.effective_user.first_name
             lol = await message.reply_photo(
                 photo=str(choice(START_IMG)),
