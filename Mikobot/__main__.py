@@ -244,20 +244,21 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         else:
             first_name = update.effective_user.first_name
             stck = await message.reply_sticker("CAACAgUAAxkBAAEBPBpjoGMZgxQ7oJcQLBnXv6cMXCJYFwACPQkAAhZu4FSOER0z_xq3LywE")
-            await asyncio.sleep(1.5)
+            await asyncio.sleep(0.5)
             await stck.delete()
             lol = await update.effective_message.reply_text(
                 FIRST_PART_TEXT.format(escape_markdown(first_name)),
                 parse_mode=ParseMode.MARKDOWN,
             )
-            await asyncio.sleep(0.1)
+            await asyncio.sleep(0.5)
             await lol.delete()
-            await asyncio.sleep(0.2)
-            guu = await update.effective_message.reply_text("🐾")
+            await asyncio.sleep(0.5)
+            guu = await update.effective_message.reply_text("✨")
             await asyncio.sleep(1.8)
             await guu.delete()  # Await this line
-            await update.effective_message.reply_text(
-                PM_START_TEXT,
+            await message.reply_photo(
+                photo=str(choice(START_IMG)),
+                caption=PM_START_TEXT.format(escape_markdown(first_name)),
                 reply_markup=InlineKeyboardMarkup(START_BTN),
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=False,
