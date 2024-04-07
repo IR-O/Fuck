@@ -245,7 +245,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         else:
             first_name = update.effective_user.first_name
 
-            P=update.effective_message.reply_sticker(
+            P = update.effective_message.reply_sticker(
                 "CAACAgUAAxkBAAIq82YSS1k1MuQnotpp_iVqLgz6WhuNAAI9CQACFm7gVI4RHTP_GrcvNAQ")
             P.delete()
             usr = update.effective_user
