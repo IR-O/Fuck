@@ -259,8 +259,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             update.effective_message.reply_photo(photo=str(choice(START_IMG)),PM_START_TEXT.format(escape_markdown(first_name),BOT_NAME,sql.num_users(),sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(START_BTN),
                 parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-           )
+                timeout=60,)
     else:
         await message.reply_photo(
             photo=str(choice(START_IMG)),
