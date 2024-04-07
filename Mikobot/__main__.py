@@ -250,7 +250,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             X.delete()
             usr = update.effective_user
             lol = update.effective_message.reply_text(
-                 PM_START_TEX.format(usr.first_name),
+                 FIRST_PART_TEXT.format(usr.first_name),
                 parse_mode=ParseMode.MARKDOWN,
             )
             await asyncio.sleep(0.2)
