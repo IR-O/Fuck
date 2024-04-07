@@ -6,7 +6,7 @@
 from pyrogram.types import InlineKeyboardButton as ib
 from telegram import InlineKeyboardButton
 
-from Mikobot import BOT_USERNAME, OWNER_ID, SUPPORT_CHAT
+from Mikobot import BOT_USERNAME, OWNER_ID, SUPPORT_CHAT, SUPPORT_CHANNEL
 
 # <============================================== CONSTANTS =========================================================>
 START_IMG = [
@@ -45,7 +45,7 @@ START_BTN = [
     ],
     [
         InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{SUPPORT_CHANNEL}"),
     ],
     
     [
@@ -62,14 +62,14 @@ GROUP_START_BTN = [
     ],
     [
         InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{SUPPORT_CHANNEL}"),
     ],
 ]
 
 ALIVE_BTN = [
     [
-        ib(text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/Hydra_Updates"),
-        ib(text="ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/hydraXsupport"),
+        ib(text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/iro_bot_support"),
+        ib(text="ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/iro_x_support"),
     ],
     [
         ib(
@@ -80,7 +80,7 @@ ALIVE_BTN = [
 ]
 
 HELP_STRINGS = """
-🫧 *Yae-Miko* 🫧
+🫧 *ɪꝛσ* 🫧
 
 ☉ *Here, you will find a list of all the available commands.*
 
