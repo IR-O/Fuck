@@ -256,8 +256,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             guu = await update.effective_message.reply_text("✨")
             await asyncio.sleep(1.8)
             await guu.delete()  # Await this line
-            await update.effective_message.reply_photo(
-                photo=str(choice(START_IMG)),
+            await update.effective_message.reply_photo(random.choice(START_IMG),
+                PM_START_TEXT.format(escape_markdown(first_name),BOT_NAME,sql.num_users(),sql.num_chats())
                 reply_markup=InlineKeyboardMarkup(START_BTN),
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=False,
